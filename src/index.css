@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blue-950 to-blue-900;
+    background-image: 
+      radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, rgba(30, 58, 138, 0.3) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%234B5563' fill-opacity='0.1' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z'/%3E%3C/svg%3E");
+  }
+
+  input, textarea {
+    @apply text-gray-900;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply flex items-center px-6 py-2.5 text-white rounded-lg
+    hover:bg-white/10 hover:text-white transition-all duration-200
+    font-medium;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link.active {
+    @apply bg-blue-600 text-white;
+    background: linear-gradient(180deg, #3B82F6 0%, #2563EB 100%);
+    box-shadow: 
+      0 4px 12px -2px rgba(37, 99, 235, 0.3),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .fractal-card {
+    @apply relative overflow-hidden rounded-3xl bg-white shadow-lg;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  }
+
+  .btn-embossed {
+    @apply relative py-3 px-6 rounded-xl font-semibold text-white 
+    transform transition-all duration-200 active:scale-95;
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+    box-shadow: 
+      0 4px 12px -2px rgba(0, 0, 0, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .phone-button {
+    @apply flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 
+    text-white rounded-xl transition-colors duration-200 font-medium;
+    background: linear-gradient(180deg, #3B82F6 0%, #2563EB 100%);
+    box-shadow: 
+      0 4px 12px -2px rgba(37, 99, 235, 0.3),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .eggshell-bg {
+    @apply bg-gray-50 rounded-2xl text-gray-900;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .notes-input {
+    @apply w-full p-4 bg-white border border-gray-200 
+    focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+    text-gray-900 placeholder-gray-400 rounded-xl resize-none;
+    min-height: 120px;
+  }
+
+  .metallic-gradient {
+    background: linear-gradient(180deg, #3B82F6 0%, #1E40AF 100%);
+    box-shadow: 
+      0 4px 12px -2px rgba(37, 99, 235, 0.3),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .header-gradient {
+    background: linear-gradient(180deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.9) 100%);
+    box-shadow: 
+      0 4px 12px -2px rgba(0, 0, 0, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}
